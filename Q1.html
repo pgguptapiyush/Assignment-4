@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #btn{
+            height:  500px; 
+            width: 500px;
+            font-size: 24px;
+            border-radius: 250px;
+        }
+
+        #btn2{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Circle</button>
+    <button id="btn2">Change Color</button>
+</body>
+<script>
+   let bt = document.getElementById('btn2');
+   bt.addEventListener('click', function random_color(){
+       let x = Math.floor(Math.random()*256);
+       let y = Math.floor(Math.random()*256);
+       let z = Math.floor(Math.random()*256);
+
+       let bg_color = `rgb(${x},${y},${z})`;
+     
+
+       document.getElementById('btn').style.backgroundColor = bg_color;
+   });
+
+
+
+</script>
+</html>
